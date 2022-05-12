@@ -81,6 +81,17 @@ nav .logo {
   gap: 5em;
 }
 
+.reverseGrid {
+  grid-auto-flow: dense;
+  direction: rtl;
+  text-align: left;
+}
+
+hr {
+  max-width: 1024px;
+  width: 100vw;
+}
+
 footer {
   background-color: black;
   color: white;
