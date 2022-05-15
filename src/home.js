@@ -4,13 +4,21 @@ import Jumbotron from "./resource/pizza.jpg";
 export class home {
   constructor() {
     this.restaurant = "TEST";
-    this.content = document.querySelector("#content");
+    this.body = document.querySelector("body");
+    this.content = this.createContainer();
     this.images = this.importAll(
       require.context("./resource/pizza", false, /\.(png|jpe?g|svg)$/)
     );
     this.text = this.importAll(
       require.context("./resource/text", false, /\.(txt)$/)
     );
+  }
+
+  createContainer() {
+    const container = document.createElement("div");
+    container.id = "content";
+    this.body.appendChild(container);
+    return container;
   }
 
   importAll(r) {
