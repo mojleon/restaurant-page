@@ -1,23 +1,29 @@
+import { forEach, map } from "lodash";
 import Icon from "./resource/logo.svg";
 import Jumbotron from "./resource/pizza.jpg";
-import Text from "./resource/text.txt";
 
-export class setuppage {
+export class home {
   constructor() {
     this.restaurant = "TEST";
     this.content = document.querySelector("#content");
+    this.images = this.importAll(
+      require.context("./resource/pizza", false, /\.(png|jpe?g|svg)$/)
+    );
+    this.text = this.importAll(
+      require.context("./resource/text", false, /\.(txt)$/)
+    );
+  }
+
+  importAll(r) {
+    let files = {};
+    r.keys().map((item, index) => {
+      files[item.replace("./", "")] = r(item);
+    });
+    return files;
   }
 
   createNav() {
-    const navLinks = [
-      "WELCOME",
-      "ABOUT US",
-      "MENU",
-      "LOGO",
-      "STORY",
-      "CONTACT",
-      "BUY NOW",
-    ];
+    const navLinks = ["LOGO", "HOME", "MENU", "CONTACT"];
 
     const logo = document.createElement("img");
     logo.src = Icon;
@@ -61,17 +67,22 @@ export class setuppage {
     this.content.appendChild(jumbotron);
   }
 
-  createText(reverseGrid = false) {
-    const TEXTDIV = document.createElement("div");
-    TEXTDIV.classList.add("text");
-    if (reverseGrid) TEXTDIV.classList.add("reverseGrid");
-    TEXTDIV.innerHTML = Text;
+  createText() {
+    console.log("test");
+    for (let i = 1; i <= 3; i++) {
+      const TEXTDIV = document.createElement("div");
+      TEXTDIV.classList.add("text");
+      if (i % 2 === 0) TEXTDIV.classList.add("reverseGrid");
+      TEXTDIV.innerHTML = this.text[`${i}.txt`].default;
 
-    const IMAGE = document.createElement("img");
-    IMAGE.src = Icon;
-    TEXTDIV.appendChild(IMAGE);
+      const IMAGE = document.createElement("img");
+      IMAGE.src = this.images[`${i}.jpg`];
+      TEXTDIV.appendChild(IMAGE);
 
-    this.content.appendChild(TEXTDIV);
+      this.content.appendChild(TEXTDIV);
+
+      if (i < 3) this.createLine();
+    }
   }
 
   createLine() {

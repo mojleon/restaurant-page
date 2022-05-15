@@ -81,6 +81,10 @@ nav .logo {
   gap: 5em;
 }
 
+.text > img {
+  max-width: 200px;
+}
+
 .reverseGrid {
   grid-auto-flow: dense;
   direction: rtl;

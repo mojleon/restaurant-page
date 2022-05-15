@@ -1,12 +1,14 @@
 import _, { get } from "lodash";
 import "./style.css";
-import { setuppage } from "./setuppage";
+import { home } from "./home";
 
-const setup = new setuppage();
+const sHome = new home();
 
-setup.createNav();
-setup.createJumbotron();
-setup.createText();
-setup.createLine();
-setup.createText(true);
-setup.createFooter();
+addEventListener("load", () => {
+  if (location.hash === "#home" || location.hash === "") {
+    sHome.createNav();
+    sHome.createJumbotron();
+    sHome.createText();
+    sHome.createFooter();
+  }
+});
