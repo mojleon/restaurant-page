@@ -1,14 +1,15 @@
 import _, { get } from "lodash";
 import "./style.css";
+import { nav } from "./nav";
 import { home } from "./home";
+
+const cNav = new nav();
+cNav.createNav();
 
 const sHome = new home();
 
-addEventListener("load", () => {
-  if (location.hash === "#home" || location.hash === "") {
-    sHome.createNav();
-    sHome.createJumbotron();
-    sHome.createText();
-    sHome.createFooter();
-  }
-});
+// const HOME = getElementById("home");
+
+sHome.createJumbotron();
+sHome.createText();
+sHome.createFooter();

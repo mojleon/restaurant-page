@@ -1,5 +1,4 @@
 import { forEach, map } from "lodash";
-import Icon from "./resource/logo.svg";
 import Jumbotron from "./resource/pizza.jpg";
 
 export class home {
@@ -20,28 +19,6 @@ export class home {
       files[item.replace("./", "")] = r(item);
     });
     return files;
-  }
-
-  createNav() {
-    const navLinks = ["LOGO", "HOME", "MENU", "CONTACT"];
-
-    const logo = document.createElement("img");
-    logo.src = Icon;
-    logo.classList.add("logo");
-
-    const nav = document.createElement("nav");
-    navLinks.map((link) => {
-      if (link === "LOGO") {
-        nav.appendChild(logo);
-      } else {
-        const navLink = document.createElement("a");
-        navLink.classList.add("nav-link");
-        navLink.innerHTML = link;
-        navLink.href = `#${link}`;
-        nav.appendChild(navLink);
-      }
-    });
-    this.content.append(nav);
   }
 
   createJumbotron() {
