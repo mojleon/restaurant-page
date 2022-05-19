@@ -1,14 +1,12 @@
-import text from "./resource/menu/1.txt";
-
-export class menu {
+export class contact {
   constructor() {
     this.body = document.querySelector("body");
   }
 
-  createMenu() {
+  createContact() {
     const content = document.createElement("div");
-    content.id = "menu-content";
-    content.innerHTML = text;
+    content.id = "contact-content";
+    content.innerHTML = "Contact";
     this.body.appendChild(content);
   }
 }

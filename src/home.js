@@ -10,15 +10,8 @@ export class home {
       require.context("./resource/pizza", false, /\.(png|jpe?g|svg)$/)
     );
     this.text = this.importAll(
-      require.context("./resource/text", false, /\.(txt)$/)
+      require.context("./resource/home", false, /\.(txt)$/)
     );
-  }
-
-  createContainer() {
-    const container = document.createElement("div");
-    container.id = "content";
-    this.body.appendChild(container);
-    return container;
   }
 
   importAll(r) {
@@ -27,6 +20,13 @@ export class home {
       files[item.replace("./", "")] = r(item);
     });
     return files;
+  }
+
+  createContainer() {
+    const container = document.createElement("div");
+    container.id = "home-content";
+    this.body.appendChild(container);
+    return container;
   }
 
   createJumbotron() {
@@ -53,19 +53,19 @@ export class home {
   }
 
   createText() {
-    console.log("test");
     for (let i = 1; i <= 3; i++) {
-      const TEXTDIV = document.createElement("div");
-      TEXTDIV.classList.add("text");
-      if (i % 2 === 0) TEXTDIV.classList.add("reverseGrid");
-      TEXTDIV.innerHTML = this.text[`${i}.txt`].default;
+      const DIV = document.createElement("div");
+      DIV.classList.add("text");
+      const TEXT = document.createElement("div");
+      if (i % 2 === 0) DIV.classList.add("reverseGrid");
+      TEXT.innerHTML = this.text[`${i}.txt`].default;
+      DIV.appendChild(TEXT);
 
       const IMAGE = document.createElement("img");
       IMAGE.src = this.images[`${i}.jpg`];
-      TEXTDIV.appendChild(IMAGE);
+      DIV.appendChild(IMAGE);
 
-      this.content.appendChild(TEXTDIV);
-
+      this.content.appendChild(DIV);
       if (i < 3) this.createLine();
     }
   }

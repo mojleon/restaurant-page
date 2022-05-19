@@ -1,0 +1,93 @@
+<div class='menu-header'>DINER</div>
+
+<div class='menu'>
+    <div>
+        <h1>Antipasti</h1>
+        <span><h3>Olive al forno</h3><p>3,50</p></span>
+        <p>in de oven geroosterde olijven en amandelen</p>
+
+        <span><h3>Bruschette</h3><p>5,50</p></span>
+        <p>4 knapperige bruschette van Altamura brood, belegd met lekkers van de dag vegetarisch mogelijk</p>
+
+        <span><h3>Bresaola al limone</h3><p>7,50</p></span>
+        <p>flinterdun gesneden bresaola van Piemontese runderen, geserveerd met rucola, Parmezaanse kaas en citroendressing</p>
+
+        <span><h3>Burrata al tartufo</h3><p>7,50</p></span>
+        <p>burrata uit Puglia gevuld met room en witte truffel uit Bari </p>
+
+        <span><h3>Scarola alla Napoletana </h3><p>4,50</p></span>
+        <p>geroosterde andijvie met Leccino olijven, ansjovis en pijnboompitten</p>
+
+        <span><h3>Focaccia romana </h3><p>4,50</p></span>
+        <p>focaccia met zeezout en rozemarijn, lekker bij alle antipasti</p>
+
+        <h1>iNSALATA</h1>
+        <span><h3>Rucola & finocchio</h3><p>5,25</p></span>
+        <p>rucola - dun gesneden venkel - Parmezaanse kaas - citroendressing</p>
+
+        <span><h3>Formaggio di capra</h3><p>7,75</p></span>
+        <p>groene salade - rode balsamico-ui - zongedroogde tomaatjes - geitenkaas - pijnboompitten - balsamicodressing</p>
+
+        <span><h3>Mozzarella di bufala</h3><p>7,75</p></span>
+        <p>Groene salade - kerstomaatjes - buffelmozzarella - huisgemaakte groene pesto</p>
+    </div>
+
+   <div>
+        <h1>Pizza</h1>
+
+        <span><h3>Margherita</h3><p>9,25</p></span>
+        <p>tomaat - mozzarella - basilicum <br>
+        met burrata (met room gevulde mozzarella) +3,50</p>
+
+        <span><h3>Salami finocchiona</h3><p>11,50</p></span>
+        <p>tomaat - mozzarella - Toscaanse venkelsalami<br>
+        met Leccino olijven +1,50</p>
+
+        <span><h3>Funghi & pancetta</h3><p>14,25</p></span>
+        <p>tomaat - mozzarella - caponata - Leccino olijven - kappertjes - ansjovis - basilicum<br>
+        caponata is een Siciliaans groentegerecht van aubergine, selderij en ui<br>
+        met burrata (met room gevulde mozzarella) +3,50</p>
+
+        <span><h3>Piccante e Gorgonzola </h3><p>13,50</p></span>
+        <p>tomaat - mozzarella - 'nduja - gorgonzola - rode ui<br>
+        vegan: tomaat - vegan Gorgonzola - rode ui - huisgemaakte vegan 'nduja</p>
+
+        <span><h3>Coppa d’Abruzzo </h3><p>14,50</p></span>
+        <p>tomaat - mozzarella - dungesneden coppa d’Abruzzo - kerstomaatjes - rucola - Parmezaanse kaas met truffelroomsaus +2,50</p>
+
+        <span><h3>Campagnola </h3><p>14,00</p></span>
+        <p>tomaat - mozzarella - gorgonzola - artisjokken - zongedroogde tomaatjes - courgette - basilicum vegan: met Leccino olijven, zonder kaas</p>
+
+        <span><h3>Caprese  </h3><p>14,00</p></span>
+        <p>tomaat - mozzarella - kerstomaatjes - buffelmozzarella - huisgemaakte groene pesto<br>
+        de buffelmozzarella wordt niet meegebakken om de fijne smaak en textuur te behouden<br>
+        met prosciutto Gran Sasso d'Abruzzo +3,00</p>
+
+        <span><h3>Da Noi</h3><p>13,75</p></span>
+        <p>paprikaroomsaus - mozzarella - gepofte paprika - rul gebakken Italiaanse saucijsjes - Parmezaanse kaas<br>
+        vega: met champignons, zonder saucijsjes</p>
+    </div>
+
+    <div>
+        <h1>Dolci</h1>
+
+        <span><h3>Tiramisú </h3><p>6,00</p></span>
+        <p>lange vingers - espresso - romige mascarpone - marsala - amaretto</p>
+
+        <span><h3>Panna cotta</h3><p>5,50</p></span>
+        <p>vanille-roompuddinkje met karamel- of rode vruchtensaus</p>
+
+        <span><h3>Sgroppino </h3><p>6,50</p></span>
+        <p>cocktail van citroenijs - wodka - prosecco DOC - een scheutje van onze huisgemaakte limoncello</p>
+
+        <span><h3>Affogato</h3><p>5,50</p></span>
+        <p>1 bol biologisch vanille-roomijs overgoten met hete espresso </p>
+
+        <span><h3>Gelato bambino </h3><p>3,50</p></span>
+        <p>kinderijsje: 1 bol biologisch vanille-roomijs met karamel- of rode vruchtensaus </p>
+
+        <h1>Speeldeeg</h1>
+        <span><h3>Speeldeeg voor kinderen </h3></span>
+        <p>Voor de kleine pizzaiolo's een bolletje pizzadeeg om mee te kleien, niet om op te eten.</p>
+    </div>
+</div>
