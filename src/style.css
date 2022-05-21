@@ -11,8 +11,19 @@ body {
   display: flex;
   align-items: center;
 
-  justify-content: center;
   flex-direction: column;
+  min-height: calc(100vh - 150px);
+}
+
+form {
+  width: 1024px;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+form input {
+  width: 100%;
 }
 
 nav {
@@ -20,6 +31,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 0 6rem;
+  height: 150px;
 }
 
 nav a {
@@ -107,6 +119,7 @@ hr {
 }
 
 footer {
+  margin-top: auto;
   background-color: black;
   color: white;
   width: 100vw;

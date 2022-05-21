@@ -64,4 +64,4 @@ createHome();
 createMenu();
 createContact();
 hideContent();
-document.getElementById("home-content").classList.remove("invinsible");
+document.getElementById("contact-content").classList.remove("invinsible");
