@@ -81,14 +81,15 @@ function showContent() {
   if (document.location.href.includes("HOME")) {
     document.getElementById("home-content").classList.remove("invinsible");
     changeLinkHover("home");
-  }
-  if (document.location.href.includes("MENU")) {
+  } else if (document.location.href.includes("MENU")) {
     document.getElementById("menu-content").classList.remove("invinsible");
     changeLinkHover("menu");
-  }
-  if (document.location.href.includes("CONTACT")) {
+  } else if (document.location.href.includes("CONTACT")) {
     document.getElementById("contact-content").classList.remove("invinsible");
     changeLinkHover("contact");
+  } else {
+    document.getElementById("home-content").classList.remove("invinsible");
+    changeLinkHover("home");
   }
 }
 
