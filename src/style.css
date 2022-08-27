@@ -7,6 +7,7 @@ body {
   background-color: #021222;
   color: white;
 }
+
 #home-content,
 #menu-content,
 #contact-content {
@@ -15,6 +16,11 @@ body {
 
   flex-direction: column;
   min-height: calc(100vh - 150px);
+}
+
+input[type="submit"],
+button {
+  cursor: pointer;
 }
 
 form {
@@ -77,13 +83,11 @@ nav .links {
   overflow: hidden;
 }
 
-.jumbotron img {
-  margin: auto;
-  height: 150%;
+.jumbotron {
+  height: 45em;
 
-  width: 100vw;
   background-repeat: no-repeat;
-  background-size: auto 100%;
+  background-size: 100vw 45em;
   background-image: linear-gradient(
       to bottom,
       rgba(2, 18, 34, 0.5),

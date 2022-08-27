@@ -9,9 +9,9 @@ import { footer } from "./footer";
 const cNav = new nav();
 cNav.createNav();
 
-const [hHome, homeContent, hMenu, hContact] = [
+const [hLogo, hHome, hMenu, hContact] = [
+  document.getElementById("logo"),
   document.getElementById("home"),
-  document.getElementById("home-content"),
   document.getElementById("menu"),
   document.getElementById("contact"),
 ];
@@ -20,6 +20,12 @@ const sHome = new home();
 const sMenu = new menu();
 const sContact = new contact();
 const sFooter = new footer();
+
+hLogo.addEventListener("click", () => {
+  hideContent();
+  document.getElementById("home-content").classList.remove("invinsible");
+  changeLinkHover("home");
+});
 
 hHome.addEventListener("click", () => {
   hideContent();

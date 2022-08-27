@@ -36,9 +36,6 @@ export class home {
     const jumbotron = document.createElement("div");
     jumbotron.classList.add("jumbotron");
 
-    const image = document.createElement("img");
-    jumbotron.append(image);
-
     const jumbotronContent = document.createElement("div");
     jumbotronContent.classList.add("jumbotron-content");
 

@@ -8,24 +8,26 @@ export class nav {
   createNav() {
     const navLinks = ["HOME", "MENU", "CONTACT"];
 
+    const logoLink = document.createElement("a");
     const logo = document.createElement("img");
     logo.src = Icon;
+    logoLink.href = `#HOME`;
     logo.classList.add("logo");
+    logoLink.id = "logo";
+    logoLink.appendChild(logo);
 
     const nav = document.createElement("nav");
-    nav.appendChild(logo);
+    nav.appendChild(logoLink);
 
     const links = document.createElement("div");
     links.classList.add("links");
     navLinks.map((link) => {
-      if (link !== "LOGO") {
-        const navLink = document.createElement("a");
-        navLink.classList.add("nav-link");
-        navLink.innerHTML = link;
-        navLink.id = link.toLowerCase();
-        navLink.href = `#${link}`;
-        links.appendChild(navLink);
-      }
+      const navLink = document.createElement("a");
+      navLink.classList.add("nav-link");
+      navLink.innerHTML = link;
+      navLink.id = link.toLowerCase();
+      navLink.href = `#${link}`;
+      links.appendChild(navLink);
     });
     nav.appendChild(links);
     this.content.append(nav);
