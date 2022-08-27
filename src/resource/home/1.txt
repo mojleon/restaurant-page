@@ -1,4 +1,0 @@
-<h1>HEADER</h1>
-
-<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde odio ab maxime consectetur! Dicta alias totam quidem! Quis nam iusto adipisci saepe maiores. Consectetur totam reprehenderit animi quis! Beatae, ipsum.
-In fuga commodi consequatur ea neque illo minima vitae.</p>
