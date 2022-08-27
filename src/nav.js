@@ -18,8 +18,7 @@ export class nav {
     const links = document.createElement("div");
     links.classList.add("links");
     navLinks.map((link) => {
-      if (link === "LOGO") {
-      } else {
+      if (link !== "LOGO") {
         const navLink = document.createElement("a");
         navLink.classList.add("nav-link");
         navLink.innerHTML = link;

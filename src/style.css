@@ -4,6 +4,8 @@ body {
   flex-direction: column;
   margin: 0;
   overflow-x: hidden;
+  background-color: #021222;
+  color: white;
 }
 #home-content,
 #menu-content,
@@ -32,14 +34,19 @@ nav {
   align-items: center;
   padding: 0 6rem;
   height: 150px;
+  z-index: 1;
 }
 
 nav a {
-  color: black;
+  color: #b5986d;
   text-decoration: none;
 }
 
 nav a:hover {
+  text-decoration: underline;
+}
+
+nav .selected {
   text-decoration: underline;
 }
 
@@ -57,9 +64,11 @@ nav .links {
 
 .jumbotron {
   position: relative;
-  background-color: black;
+  top: -150px;
   width: 100vw;
-  height: 25em;
+  height: 50em;
+  z-index: -1;
+  margin-bottom: -200px;
 
   display: flex;
   align-items: center;
@@ -70,41 +79,70 @@ nav .links {
 
 .jumbotron img {
   margin: auto;
-  opacity: 0.5;
+  height: 150%;
+
+  width: 100vw;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(2, 18, 34, 0.5),
+      rgba(2, 18, 34, 1)
+    ),
+    url("./resource/pizza.jpg");
 }
 
 .jumbotron-content {
   position: absolute;
   width: 1024px;
   display: flex;
-  justify-content: center;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
 }
 
 .jumbotron h1 {
-  font-family: "vladimir script", cursive;
   color: white;
-  font-size: 56pt;
+  font-size: 62pt;
   font-weight: 100;
 }
 
 .jumbotron button {
-  padding: 1em;
+  padding: 2em;
   bottom: 0;
+  color: #b5986d;
   text-transform: uppercase;
+  background: rgba(0, 0, 0, 0.5);
+  border: #b5986d solid 1px;
+
+  z-index: 2;
+  align-self: flex-end;
 }
 
-.text {
-  margin: 5em 0;
-  max-width: 1024px;
+.jumbotron button:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.block {
+  padding: 10em 0;
   display: grid;
   grid-template-columns: 4fr 1fr;
+  justify-content: center;
   gap: 5em;
+  max-width: 1024px;
 }
 
-.text > img {
-  max-width: 200px;
+.block h1 {
+  color: #b5986d;
+}
+
+.block > div {
+  margin: auto;
+}
+
+.block img {
+  border: #b5986d solid 1px;
+  padding: 16px;
+  max-width: 400px;
 }
 
 .reverseGrid {
@@ -114,6 +152,9 @@ nav .links {
 }
 
 hr {
+  height: 1px;
+  border: none;
+  background-color: #b5986d;
   max-width: 1024px;
   width: 100vw;
 }
@@ -124,11 +165,13 @@ footer {
   color: white;
   width: 100vw;
   height: 5em;
+  text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .menu-header {
+  color: #b5986d;
   font-size: 3em;
   font-weight: bolder;
   text-align: left;
@@ -149,13 +192,52 @@ footer {
 
 .menu span h3,
 .menu span p {
+  color: #b5986d;
   margin: 0;
 }
 
 .menu p {
+  color: rgb(200, 200, 200);
   margin-bottom: 3em;
 }
 
 .invinsible {
   display: none !important;
+}
+
+.thumbnails {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1024px;
+  margin: 150px 0;
+}
+
+.thumbnails img {
+  border: #b5986d solid 1px;
+  padding: 16px;
+  margin: 16px;
+  max-width: 260px;
+  height: 180px;
+}
+
+#contact-content label {
+  color: #b5986d;
+}
+
+#contact-content input,
+#contact-content select,
+#contact-content textarea {
+  color: white;
+  border: 1px solid #b5986d;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 50px;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+#contact-content input[type="submit"]:hover {
+  background-color: rgba(255, 255, 255, 0.5);
 }

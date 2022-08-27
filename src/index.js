@@ -24,21 +24,25 @@ const sFooter = new footer();
 hHome.addEventListener("click", () => {
   hideContent();
   document.getElementById("home-content").classList.remove("invinsible");
+  changeLinkHover("home");
 });
 
 hMenu.addEventListener("click", () => {
   hideContent();
   document.getElementById("menu-content").classList.remove("invinsible");
+  changeLinkHover("menu");
 });
 
 hContact.addEventListener("click", () => {
   hideContent();
   document.getElementById("contact-content").classList.remove("invinsible");
+  changeLinkHover("contact");
 });
 
 function createHome() {
   sHome.createJumbotron();
-  sHome.createText();
+  sHome.createInformationBlocks();
+  sHome.createThumbnails();
   document.getElementById("home-content").appendChild(sFooter.createFooter());
 }
 
@@ -60,8 +64,30 @@ function hideContent() {
   document.getElementById("contact-content").classList.add("invinsible");
 }
 
+function changeLinkHover(link) {
+  document.getElementById("home").classList.remove("selected");
+  document.getElementById("menu").classList.remove("selected");
+  document.getElementById("contact").classList.remove("selected");
+  document.getElementById(link).classList.add("selected");
+}
+
+function showContent() {
+  if (document.location.href.includes("HOME")) {
+    document.getElementById("home-content").classList.remove("invinsible");
+    changeLinkHover("home");
+  }
+  if (document.location.href.includes("MENU")) {
+    document.getElementById("menu-content").classList.remove("invinsible");
+    changeLinkHover("menu");
+  }
+  if (document.location.href.includes("CONTACT")) {
+    document.getElementById("contact-content").classList.remove("invinsible");
+    changeLinkHover("contact");
+  }
+}
+
 createHome();
 createMenu();
 createContact();
 hideContent();
-document.getElementById("home-content").classList.remove("invinsible");
+showContent();

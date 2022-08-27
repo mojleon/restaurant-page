@@ -12,6 +12,9 @@ export class home {
     this.text = this.importAll(
       require.context("./resource/home", false, /\.(txt)$/)
     );
+    this.slider = this.importAll(
+      require.context("./resource/slider", false, /\.(png|jpe?g|svg)$/)
+    );
   }
 
   importAll(r) {
@@ -34,14 +37,13 @@ export class home {
     jumbotron.classList.add("jumbotron");
 
     const image = document.createElement("img");
-    image.src = Jumbotron;
     jumbotron.append(image);
 
     const jumbotronContent = document.createElement("div");
     jumbotronContent.classList.add("jumbotron-content");
 
     const header = document.createElement("h1");
-    header.innerHTML = "Welcome to our restaurant.";
+    header.innerHTML = "Welcome to the Segreto restaurant.";
     jumbotronContent.append(header);
 
     const reserveButton = document.createElement("button");
@@ -52,21 +54,37 @@ export class home {
     this.content.appendChild(jumbotron);
   }
 
-  createText() {
-    for (let i = 1; i <= 3; i++) {
+  createInformationBlocks() {
+    for (let i = 1; i <= 2; i++) {
       const DIV = document.createElement("div");
-      DIV.classList.add("text");
-      const TEXT = document.createElement("div");
+      DIV.classList.add("block");
+      const INNERDIV = document.createElement("div");
       if (i % 2 === 0) DIV.classList.add("reverseGrid");
-      TEXT.innerHTML = this.text[`${i}.txt`].default;
-      DIV.appendChild(TEXT);
+      INNERDIV.innerHTML = this.text[`${i}.txt`].default;
+      DIV.appendChild(INNERDIV);
 
+      const IMAGEDIV = document.createElement("div");
       const IMAGE = document.createElement("img");
       IMAGE.src = this.images[`${i}.jpg`];
-      DIV.appendChild(IMAGE);
+      IMAGEDIV.appendChild(IMAGE);
+      DIV.appendChild(IMAGEDIV);
 
       this.content.appendChild(DIV);
-      if (i < 3) this.createLine();
+      this.createLine();
+    }
+  }
+
+  createThumbnails() {
+    const DIV = document.createElement("div");
+    DIV.classList.add("thumbnails");
+
+    for (let i = 1; i <= 9; i++) {
+      const IMAGEDIV = document.createElement("div");
+      const IMAGE = document.createElement("img");
+      IMAGE.src = this.slider[`${i}.jpg`];
+      IMAGEDIV.appendChild(IMAGE);
+      DIV.appendChild(IMAGEDIV);
+      this.content.appendChild(DIV);
     }
   }
 
