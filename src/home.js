@@ -74,6 +74,7 @@ export class home {
   createThumbnails() {
     const DIV = document.createElement("div");
     DIV.classList.add("thumbnails");
+    DIV.innerHTML = this.text[`2.txt`].default;
 
     for (let i = 1; i <= 9; i++) {
       const IMAGEDIV = document.createElement("div");

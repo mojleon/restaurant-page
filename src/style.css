@@ -21,6 +21,7 @@ body {
 input[type="submit"],
 button {
   cursor: pointer;
+  z-index: 11;
 }
 
 form {
@@ -48,12 +49,10 @@ nav a {
   text-decoration: none;
 }
 
-nav a:hover {
-  text-decoration: underline;
-}
-
+nav a:hover:not(#logo),
 nav .selected {
-  text-decoration: underline;
+  border-bottom: 1px solid #b5986d; /* Or whatever color you want */
+  text-decoration: none;
 }
 
 nav .logo {
@@ -73,7 +72,6 @@ nav .links {
   top: -150px;
   width: 100vw;
   height: 50em;
-  z-index: -1;
   margin-bottom: -200px;
 
   display: flex;
@@ -127,6 +125,7 @@ nav .links {
 }
 
 .block {
+  line-height: 24pt;
   padding: 10em 0;
   display: grid;
   grid-template-columns: 4fr 1fr;
@@ -135,7 +134,8 @@ nav .links {
   max-width: 1024px;
 }
 
-.block h1 {
+.block h1,
+.thumbnails h1 {
   color: #b5986d;
 }
 
@@ -215,6 +215,11 @@ footer {
   justify-content: center;
   max-width: 1024px;
   margin: 150px 0;
+  line-height: 24pt;
+}
+
+.thumbnails > p {
+  margin-bottom: 75px;
 }
 
 .thumbnails img {
@@ -232,10 +237,16 @@ footer {
 #contact-content input,
 #contact-content select,
 #contact-content textarea {
+  padding-left: 16px;
   color: white;
   border: 1px solid #b5986d;
   background-color: rgba(0, 0, 0, 0.5);
   height: 50px;
+  box-sizing: border-box;
+}
+
+#contact-content textarea {
+  padding-top: 16px;
 }
 
 select::-ms-expand {
