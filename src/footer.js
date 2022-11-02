@@ -12,12 +12,12 @@ export default class footer {
 
     const footerText = document.createElement("div");
     footerText.classList.add("footer-text");
-    footerText.innerHTML = "Copyright © 2020";
+    footerText.innerHTML = "Copyright © 2022";
     footerContent.appendChild(footerText);
 
     const footerLinks = document.createElement("div");
     footerLinks.classList.add("footer-links");
-    footerLinks.innerHTML = "Privacy Policy | Terms of Use";
+    footerLinks.innerHTML = `by <a href="https://github.com/mojleon" target="_blank">Damir Kalbic</a>`;
     footerContent.appendChild(footerLinks);
 
     footer.appendChild(footerContent);

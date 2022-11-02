@@ -1,3 +1,12 @@
+:root {
+  --color-primary: #b5986d;
+  --color-text: #fff;
+
+  --width-full: 100vw;
+  --width-container: 1024px;
+  --size-standard: 150px;
+}
+
 body {
   display: flex;
   justify-content: center;
@@ -5,7 +14,7 @@ body {
   margin: 0;
   overflow-x: hidden;
   background-color: #021222;
-  color: white;
+  color: var(--color-text);
 
   padding: 32px 32px 0 32px;
 }
@@ -17,7 +26,7 @@ body {
   align-items: center;
 
   flex-direction: column;
-  min-height: calc(100vh - 150px);
+  min-height: calc(100vh - var(--size-standard));
 }
 
 input[type="submit"],
@@ -27,7 +36,7 @@ button {
 }
 
 form {
-  width: 1024px;
+  width: var(--width-container);
   display: flex;
   flex-direction: column;
   gap: 1em;
@@ -42,24 +51,24 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 0 6rem;
-  height: 150px;
+  height: var(--size-standard);
   z-index: 1;
 }
 
 nav a {
-  color: #b5986d;
+  color: var(--color-primary);
   text-decoration: none;
 }
 
 nav a:hover:not(#logo),
 nav .selected {
-  border-bottom: 1px solid #b5986d; /* Or whatever color you want */
+  border-bottom: 1px solid var(--color-primary); /* Or whatever color you want */
   text-decoration: none;
 }
 
 nav .logo {
-  width: 150px;
-  height: 150px;
+  width: var(--size-standard);
+  height: var(--size-standard);
 }
 
 nav .links {
@@ -71,8 +80,8 @@ nav .links {
 
 .jumbotron {
   position: relative;
-  top: -150px;
-  width: 100vw;
+  top: -180px;
+  width: var(--width-full);
   height: 50em;
   margin-bottom: -200px;
 
@@ -84,10 +93,10 @@ nav .links {
 }
 
 .jumbotron {
-  height: 45em;
-
+  height: 50em;
+  
   background-repeat: no-repeat;
-  background-size: 100vw 45em;
+  background-size: cover;
   background-image: linear-gradient(
       to bottom,
       rgba(2, 18, 34, 0.5),
@@ -98,14 +107,14 @@ nav .links {
 
 .jumbotron-content {
   position: absolute;
-  width: 1024px;
+  width: var(--width-container);
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .jumbotron h1 {
-  color: white;
+  color: var(--color-text);
   font-size: 62pt;
   font-weight: 100;
 }
@@ -113,10 +122,10 @@ nav .links {
 .jumbotron button {
   padding: 2em;
   bottom: 0;
-  color: #b5986d;
+  color: var(--color-primary);
   text-transform: uppercase;
   background: rgba(0, 0, 0, 0.5);
-  border: #b5986d solid 1px;
+  border: var(--color-primary) solid 1px;
 
   z-index: 2;
 }
@@ -127,17 +136,22 @@ nav .links {
 
 .block {
   line-height: 24pt;
-  padding: 10em 0;
+  padding-top: 2em;
+  padding-bottom: 10em;
   display: grid;
   grid-template-columns: 4fr 1fr;
   justify-content: center;
   gap: 5em;
-  max-width: 1024px;
+  max-width: var(--width-container);
+}
+
+hr {
+  margin-bottom: 10em;
 }
 
 .block h1,
 .thumbnails h1 {
-  color: #b5986d;
+  color: var(--color-primary);
 }
 
 .block > div {
@@ -145,10 +159,11 @@ nav .links {
 }
 
 .block img {
-  border: #b5986d solid 1px;
+  border: var(--color-primary) solid 1px;
   padding: 16px;
   max-width: 400px;
 }
+
 
 .reverseGrid {
   grid-auto-flow: dense;
@@ -159,24 +174,30 @@ nav .links {
 hr {
   height: 1px;
   border: none;
-  background-color: #b5986d;
-  max-width: 1024px;
-  width: 100vw;
+  background-color: var(--color-primary);
+  max-width: var(--width-container);
+  width: var(--width-full);
 }
 
 footer {
+  line-height: 16pt;
   margin-top: auto;
   background-color: black;
-  color: white;
-  width: 100vw;
+  color: var(--color-text);
+  width: var(--width-full);
   height: 5em;
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
+footer a {
+  color: white;
+}
+
 .menu-header {
-  color: #b5986d;
+  color: var(--color-primary);
   font-size: 3em;
   font-weight: bolder;
   text-align: left;
@@ -186,7 +207,7 @@ footer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 5em;
-  max-width: 1024px;
+  max-width: var(--width-container);
 }
 
 .menu span {
@@ -197,7 +218,7 @@ footer {
 
 .menu span h3,
 .menu span p {
-  color: #b5986d;
+  color: var(--color-primary);
   margin: 0;
 }
 
@@ -211,11 +232,11 @@ footer {
 }
 
 .thumbnails {
+  margin-bottom: 10em;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  max-width: 1024px;
-  margin: 150px 0;
+  max-width: var(--width-container);
   line-height: 24pt;
 }
 
@@ -224,7 +245,7 @@ footer {
 }
 
 .thumbnails img {
-  border: #b5986d solid 1px;
+  border: var(--color-primary) solid 1px;
   padding: 16px;
   margin: 16px;
   max-width: 260px;
@@ -232,15 +253,15 @@ footer {
 }
 
 #contact-content label {
-  color: #b5986d;
+  color: var(--color-primary);
 }
 
 #contact-content input,
 #contact-content select,
 #contact-content textarea {
   padding-left: 16px;
-  color: white;
-  border: 1px solid #b5986d;
+  color: var(--color-text);
+  border: 1px solid var(--color-primary);
   background-color: rgba(0, 0, 0, 0.5);
   height: 50px;
   box-sizing: border-box;
@@ -267,8 +288,8 @@ select::-ms-expand {
   .jumbotron-content {
      display: inline;
      text-align: center;
-     width: 100vw;
-     margin-top: 150px;
+     width: var(--width-full);
+     margin-top: var(--size-standard);
   }
 
   .block {
