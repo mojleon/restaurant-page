@@ -268,7 +268,7 @@ select::-ms-expand {
      display: inline;
      text-align: center;
      width: 100vw;
-     margin-top: 50px;
+     margin-top: 150px;
   }
 
   .block {
@@ -277,6 +277,10 @@ select::-ms-expand {
 
   #menu-content {
     margin-top: 50px;
+  }
+
+  .menu {
+    grid-template-columns: 1fr;
   }
 
   #contact-content {
