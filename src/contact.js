@@ -1,4 +1,4 @@
-export class contact {
+export default class contact {
   constructor() {
     this.body = document.querySelector("body");
   }

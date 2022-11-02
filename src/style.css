@@ -6,6 +6,8 @@ body {
   overflow-x: hidden;
   background-color: #021222;
   color: white;
+
+  padding: 32px;
 }
 
 #home-content,
@@ -91,7 +93,7 @@ nav .links {
       rgba(2, 18, 34, 0.5),
       rgba(2, 18, 34, 1)
     ),
-    url("./resource/pizza.jpg");
+    url("./assets/pizza.jpg");
 }
 
 .jumbotron-content {
@@ -117,7 +119,6 @@ nav .links {
   border: #b5986d solid 1px;
 
   z-index: 2;
-  align-self: flex-end;
 }
 
 .jumbotron button:hover {
@@ -255,4 +256,34 @@ select::-ms-expand {
 
 #contact-content input[type="submit"]:hover {
   background-color: rgba(255, 255, 255, 0.5);
+}
+
+@media screen and (max-width: 1024px) {
+  nav {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .jumbotron-content {
+     display: inline;
+     text-align: center;
+     width: 100vw;
+     margin-top: 50px;
+  }
+
+  .block {
+    grid-template-columns: 1fr;
+  }
+
+  #menu-content {
+    margin-top: 50px;
+  }
+
+  #contact-content {
+    margin-top: 50px;
+  }
+
+  form {
+    width: 100%;
+  }
 }

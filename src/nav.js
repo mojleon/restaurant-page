@@ -1,6 +1,6 @@
-import Icon from "./resource/logo.svg";
+import Icon from "./assets/logo.svg";
 
-export class nav {
+export default class nav {
   constructor() {
     this.content = document.querySelector("body");
   }

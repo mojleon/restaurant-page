@@ -1,19 +1,19 @@
 import { forEach, map } from "lodash";
-import Jumbotron from "./resource/pizza.jpg";
+import Jumbotron from "./assets/pizza.jpg";
 
-export class home {
+export default class home {
   constructor() {
     this.restaurant = "TEST";
     this.body = document.querySelector("body");
     this.content = this.createContainer();
     this.images = this.importAll(
-      require.context("./resource/pizza", false, /\.(png|jpe?g|svg)$/)
+      require.context("./assets/pizza", false, /\.(png|jpe?g|svg)$/)
     );
     this.text = this.importAll(
-      require.context("./resource/home", false, /\.(txt)$/)
+      require.context("./assets/home", false, /\.(txt)$/)
     );
     this.slider = this.importAll(
-      require.context("./resource/slider", false, /\.(png|jpe?g|svg)$/)
+      require.context("./assets/slider", false, /\.(png|jpe?g|svg)$/)
     );
   }
 

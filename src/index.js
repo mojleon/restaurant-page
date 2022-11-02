@@ -1,10 +1,10 @@
 import _, { get } from "lodash";
 import "./style.css";
-import { nav } from "./nav";
-import { home } from "./home";
-import { menu } from "./menu";
-import { contact } from "./contact";
-import { footer } from "./footer";
+import nav from "./nav";
+import home from "./home";
+import menu from "./menu";
+import contact from "./contact";
+import footer from "./footer";
 
 const cNav = new nav();
 cNav.createNav();

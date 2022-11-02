@@ -1,4 +1,4 @@
-export class footer {
+export default class footer {
   constructor() {
     this.body = document.querySelector("body");
   }

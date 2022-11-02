@@ -1,6 +1,6 @@
-import text from "./resource/menu/1.txt";
+import text from "./assets/menu/1.txt";
 
-export class menu {
+export default class menu {
   constructor() {
     this.body = document.querySelector("body");
   }
