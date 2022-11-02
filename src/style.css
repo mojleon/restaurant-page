@@ -94,7 +94,7 @@ nav .links {
 
 .jumbotron {
   height: 50em;
-  
+
   background-repeat: no-repeat;
   background-size: cover;
   background-image: linear-gradient(
@@ -145,10 +145,6 @@ nav .links {
   max-width: var(--width-container);
 }
 
-hr {
-  margin-bottom: 10em;
-}
-
 .block h1,
 .thumbnails h1 {
   color: var(--color-primary);
@@ -164,7 +160,6 @@ hr {
   max-width: 400px;
 }
 
-
 .reverseGrid {
   grid-auto-flow: dense;
   direction: rtl;
@@ -176,7 +171,8 @@ hr {
   border: none;
   background-color: var(--color-primary);
   max-width: var(--width-container);
-  width: var(--width-full);
+  width: 100%;
+  margin-bottom: 10em;
 }
 
 footer {
@@ -301,10 +297,10 @@ select::-ms-expand {
   }
 
   .jumbotron-content {
-     display: inline;
-     text-align: center;
-     width: var(--width-full);
-     margin-top: var(--size-standard);
+    display: inline;
+    text-align: center;
+    width: var(--width-full);
+    margin-top: var(--size-standard);
   }
 
   .block {
